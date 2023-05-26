@@ -35,13 +35,13 @@ const component = '[IMX-CREATE-COLLECTION]';
    * Edit your values here
    */
   const params: CreateCollectionParams = {
-    name: 'ENTER_COLLECTION_NAME',
-    // description: 'ENTER_COLLECTION_DESCRIPTION (OPTIONAL)',
+    name: 'Valtreas Equipment',
+    description: 'Ingame equipment items for Valtreas.',
     contract_address: collectionContractAddress,
     owner_public_key: ownerPublicKey,
-    // icon_url: '',
-    // metadata_api_url: '',
-    // collection_image_url: '',
+    icon_url: '',
+    metadata_api_url: 'https://dev.api.valtreas.com/equipment/metadata/',
+    collection_image_url: '',
     project_id: parseInt(projectId, 10),
   };
 

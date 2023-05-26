@@ -20,15 +20,6 @@ interface GetProjectArguments {
 (async (): Promise<void> => {
   const privateKey = requireEnvironmentVariable('OWNER_ACCOUNT_PRIVATE_KEY');
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  const { project_id } = parse<GetProjectArguments>({
-    project_id: {
-      type: Number,
-      alias: 'i',
-      description: 'The ID of the project',
-    },
-  });
-
   const signer = new Wallet(privateKey).connect(provider);
 
   const user = await ImmutableXClient.build({
@@ -41,7 +32,7 @@ interface GetProjectArguments {
 
   let project;
   try {
-    project = await user.getProject({ project_id });
+    project = await user.getProject({ project_id: 9386 });
   } catch (error) {
     throw new Error(JSON.stringify(error, null, 2));
   }

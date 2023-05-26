@@ -33,9 +33,14 @@ const component = '[IMX-UPDATE-COLLECTION]';
    * Edit your values here
    */
   const params: UpdateCollectionParams = {
-    name: 'ENTER_UPDATED_COLLECTION_NAME_HERE',
+    name: 'Valtreas Equipment',
+    description: 'Ingame equipment items for Valtreas.',
+    metadata_api_url: 'https://dev.api.valtreas.com/equipment/metadata/',
+    icon_url:
+      'https://valtreas.com/wp-content/uploads/2023/05/favicon_squared.png',
+    collection_image_url:
+      'https://valtreas.com/wp-content/uploads/2023/05/valtreas-extended-logo.png',
   };
-
   let collection;
   try {
     collection = await user.updateCollection(collectionContractAddress, params);
